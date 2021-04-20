@@ -15,13 +15,13 @@ struct Person {
     
     var collectionOfSurnames = ["Smith", "Bond", "Livingstone", "Akerman", "Hudson"]
     
-    let collectionOfEmails = ["qwerty@gmail.com",
+    var collectionOfEmails = ["qwerty@gmail.com",
                               "super_programer45@gmail.com",
                               "pomidorchik228@gmail.com",
                               "photoshop_master97@gmail.com",
                               "real_hitman200@gmail.com"]
     
-    let collectionOfTelephones = ["0568790348",
+    var collectionOfTelephones = ["0568790348",
                                   "5867093458",
                                   "7798456238",
                                   "4067588253",
