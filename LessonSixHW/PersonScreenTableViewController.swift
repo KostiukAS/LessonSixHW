@@ -9,7 +9,7 @@ import UIKit
 
 class PersonScreenTableViewController: UITableViewController {
     
-    private let person = Person()
+    private var person = Person()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,11 @@ class PersonScreenTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
-        cell.textLabel?.text = "0"
+        let surname = Int.random(in: 0...(person.collectionOfSurnames.count - 1))
+        let name = Int.random(in: 0...(person.collectionOfNames.count - 1))
+        cell.textLabel?.text = "\(person.collectionOfSurnames[surname]) \(person.collectionOfNames[name])"
+        person.collectionOfSurnames.remove(at: surname)
+        person.collectionOfNames.remove(at: name)
         cell.textLabel?.numberOfLines = 0
         return cell
     }
@@ -81,17 +85,4 @@ class PersonScreenTableViewController: UITableViewController {
     }
     */
 
-}
-
-extension PersonScreenTableViewController {
-    
-    //MARK: - Extension
-    
-    private func getRandomNumbers(count: Int) -> [Int] {
-        var set = Set<Int>()
-        while set.count < count {
-            set.insert(Int.random(in: 0...(count - 1)))
-        }
-        return Array(set)
-    }
 }

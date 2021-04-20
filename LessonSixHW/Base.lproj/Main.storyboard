@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Person Screen Table View Controller-->
+        <!--Persons-->
         <scene sceneID="68J-x8-teP">
             <objects>
                 <tableViewController id="qJC-rH-SZx" customClass="PersonScreenTableViewController" customModule="LessonSixHW" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="qJC-rH-SZx" id="Rdp-lh-C48"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ufU-Pj-i6R"/>
+                    <navigationItem key="navigationItem" title="Persons" id="kIW-Hx-lrg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoS-Sz-Ppi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

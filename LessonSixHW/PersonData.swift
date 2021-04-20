@@ -11,9 +11,9 @@ struct Person {
     
     // MARK: - Public properties
     
-    let collectionOfNames = ["Nick", "John", "Ron", "Aaron", "Martin"]
+    var collectionOfNames = ["Nick", "John", "Ron", "Aaron", "Martin"]
     
-    let collectionOfSurnames = ["Smith", "Bond", "Livingstone", "Akerman", "Hudson"]
+    var collectionOfSurnames = ["Smith", "Bond", "Livingstone", "Akerman", "Hudson"]
     
     let collectionOfEmails = ["qwerty@gmail.com",
                               "super_programer45@gmail.com",
