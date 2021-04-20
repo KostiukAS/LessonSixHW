@@ -10,7 +10,7 @@ import UIKit
 class PersonScreenTableViewController: UITableViewController {
     
     private let person = Person()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,10 +29,9 @@ class PersonScreenTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
+        cell.textLabel?.text = "0"
+        cell.textLabel?.numberOfLines = 0
         return cell
     }
     
@@ -84,3 +83,15 @@ class PersonScreenTableViewController: UITableViewController {
 
 }
 
+extension PersonScreenTableViewController {
+    
+    //MARK: - Extension
+    
+    private func getRandomNumbers(count: Int) -> [Int] {
+        var set = Set<Int>()
+        while set.count < count {
+            set.insert(Int.random(in: 0...(count - 1)))
+        }
+        return Array(set)
+    }
+}

@@ -9,7 +9,7 @@ import UIKit
 
 struct Person {
     
-    // MARK: - Properties
+    // MARK: - Public properties
     
     let collectionOfNames = ["Nick", "John", "Ron", "Aaron", "Martin"]
     
